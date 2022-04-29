@@ -64,7 +64,7 @@ public class Company{
         double costRechargeableBatteries=0;
         for (int i = 0; i < MAX_BATTERIES; i++) {
             if (batteries[i]!=null && batteries[i] instanceof RechargeableBattery) {
-                costRechargeableBatteries=((RechargeableBattery)batteries[i]).calculateUsefulLifeCost();
+                costRechargeableBatteries+=((RechargeableBattery)batteries[i]).calculateUsefulLifeCost();
                 amount++;
             }
         }
